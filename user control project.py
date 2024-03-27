@@ -121,7 +121,7 @@ class MyGame(arcade.Window):
         y3 = random.randint(530, 900)
         x4 = random.randint(4, 298)
         y4 = random.randint(530, 900)
-        self.player2 = Player2(x, y, 0, -10, 20, arcade.color.RED)
+        self.player2 = Player2(x, y, 0, -10, 20, arcade.color.BLUE)
         self.player3 = Player3(x2, y2, 0, -10, 20, arcade.color.RED)
         self.player4 = Player4(x3, y3, 0, -10, 20, arcade.color.RED)
         self.player5 = Player5(x4, y4, 0, -10, 20, arcade.color.RED)
@@ -157,6 +157,7 @@ class MyGame(arcade.Window):
             self.player3.dy *= 0
             self.player4.dy *= 0
             self.player5.dy *= 0
+            arcade.draw_text("You Lost", 100, 400, arcade.color.WHITE, 200)
 
         elif self.ball.pos_x - 25 <= self.player3.pos_x <= self.ball.pos_x + 25 and self.player3.pos_y <= 50:
             arcade.set_background_color(arcade.color.BLACK)
@@ -164,6 +165,7 @@ class MyGame(arcade.Window):
             self.player3.dy *= 0
             self.player4.dy *= 0
             self.player5.dy *= 0
+            arcade.draw_text("You Lost", 100, 400, arcade.color.WHITE, 200)
 
         elif self.ball.pos_x - 25 <= self.player4.pos_x <= self.ball.pos_x + 25 and self.player4.pos_y <= 50:
             arcade.set_background_color(arcade.color.BLACK)
@@ -171,6 +173,7 @@ class MyGame(arcade.Window):
             self.player3.dy *= 0
             self.player4.dy *= 0
             self.player5.dy *= 0
+            arcade.draw_text("You Lost", 100, 400, arcade.color.WHITE, 200)
 
         elif self.ball.pos_x - 25 <= self.player5.pos_x <= self.ball.pos_x + 25 and self.player5.pos_y <= 50:
             arcade.set_background_color(arcade.color.BLACK)
@@ -178,6 +181,7 @@ class MyGame(arcade.Window):
             self.player3.dy *= 0
             self.player4.dy *= 0
             self.player5.dy *= 0
+            arcade.draw_text("You Lost", 100, 400, arcade.color.WHITE, 200)
 
 
 def main():
